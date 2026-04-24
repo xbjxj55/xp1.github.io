@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>全网最全最稳定漫画动漫资源，无广！无付费！</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{
+    background:linear-gradient(135deg,#74b9ff,#6c5ce7);
+    min-height:100vh;
+    padding:15px;
+    width:100%;
+    overflow-x:hidden;
+}
+.container{
+    max-width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.title{
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:15px;
+    margin-top:10px;
+    line-height:1.4;
+}
+
+.swiper{
+    width:100%;
+    padding:10px 0 35px;
+    overflow:visible;
+}
+.swiper-slide{
+  width:50% !important;
+  aspect-ratio:1/1;
+  opacity:0.5;
+  transform:scale(0.85);
+  transition:0.4s;
+}
+.swiper-slide-active{
+  opacity:1;
+  transform:scale(1);
+  z-index:100;
+}
+/* ==========核心提速代码========== */
+.swiper-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:16px;
+  /* 硬件加速 + 强制图片加速渲染 */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  image-rendering: high-quality;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  /* 禁止浏览器重新渲染浪费速度 */
+  will-change: transform;
+}
+img{
+    /* 全局图片缓存加速 */
+    image-rendering: auto;
+}
+.swiper-pagination{bottom:5px;}
+
+.step-list{
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+}
+.step-card{
+  background:#fff;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.08);
+  width:100%;
+}
+.step-title{
+    color:#e74c3c;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+    text-align:left;
+}
+.step-content{
+    font-size:15px;
+    color:#333;
+    line-height:1.6;
+    margin-bottom:8px;
+    text-align:left;
+}
+.step-note{
+  background:#ffebee;
+  padding:8px;
+  border-radius:6px;
+  margin-top:8px;
+  color:#000 !important; 
+  font-weight:bold;
+  font-size:14px;
+  text-align:left;
+}
+.code-box{
+  background:#e3f2fd;
+  padding:10px;
+  border-radius:6px;
+  margin:8px 0;
+  color:#1976d2;
+  font-weight:bold;
+  font-size:14px;
+}
+.guide-img{
+width:100%;
+border-radius:10px;
+margin:10px 0;
+/* 图片加速 */
+transform:translateZ(0);
+}
+
+.upload-tip-red{
+  color:red;
+  font-size:16px;
+  font-weight:bold;
+  margin-bottom:10px;
+  text-align:center;
+}
+.upload-box{
+  border:2px dashed #1976d2;
+  border-radius:10px;
+  padding:20px 10px;
+  text-align:center;
+  margin:10px 0;
+  cursor:pointer;
+  width:100%;
+}
+#fileInput{display:none;}
+.preview-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0;
+}
+.preview-img{width:80px;height:80px;border-radius:6px;object-fit:cover;}
+.submit-btn{
+  width:100%;
+  background:#1976d2;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:12px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.success-tip{
+    text-align:center;
+    color:#4caf50;
+    margin-top:10px;
+    display:none;
+    font-size:15px;
+}
+
+.disclaimer{
+  background:#f3e5f5;
+  padding:15px;
+  border-radius:12px;
+  margin-top:20px;
+  font-size:13px;
+  color:#555;
+  line-height:1.6;
+  width:100%;
+}
+.disclaimer > div{
+  font-weight:bold;
+  color:#9c27b0;
+  margin-bottom:8px;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- 预加载只保留关键图，多余预加载反而拖慢 -->
+<link rel="preload" as="image" href="图1.jpg">
+<link rel="preload" as="image" href="图2.jpg">
+</head>
+<body>
+<div class="container">
+    <div class="title">全网最全最稳定漫画动漫资源，无广！无付费！</div>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img loading="lazy" src="图1.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图2.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图3.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图4.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图5.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图6.jpg"></div>
+    <div class="swiper-slide"><img loading="lazy" src="图7.jpg"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<div class="step-list">
+    <div class="step-card">
+        <div class="step-title" style="color:red;">永久免费更新！苹果ios和安卓都可以用</div>
+    </div>
+    <div class="step-card">
+        <div class="step-title" style="color:#000;">第一步：保存下方图片</div>
+        <img loading="lazy" src="保存图1.jpg" class="guide-img">
+        <div class="step-note">长按保存图片</div>
+    </div>
+    <div class="step-card">
+        <div class="step-title" style="color:#000;">第二步：打开抖音</div>
+        <div class="step-content">
+           <div class="code-box">搜索： 看漫画 漫画推荐 iOS看漫画 漫画 看漫神器 漫画软件</div>
+            <span style="color:red;">(找一个作品评论保存的图片并截图，要3条作品评论好截屏，如下图所示)</span>
+            <img loading="lazy" src="样品图1.jpg" class="guide-img">
+        </div>
+    </div>
+    <div class="step-card">
+        <div class="step-title" style="color:#000;">最后一步：把刚刚评论好的截图点下面上传即可！</div>
+        <div class="step-note" style="color:#000; background:#ffebee;">提交完评论截屏后，会自动弹出教程，弹出提交成功的下面就是教程，别点快了！</div>
+        <div class="upload-tip-red">在这里上传三个截图（已连接AI机器人自动审核）</div>
+        <div class="upload-box" id="uploadArea">
+            <div>📁 上传文件</div>
+            <input type="file" id="fileInput" accept="image/*" multiple>
+        </div>
+        <div class="preview-container" id="previewContainer"></div>
+        <button class="submit-btn" id="submitBtn">提交</button>
+        <div class="success-tip" id="successTip">✅ 提交成功！教程已弹出，请往下查看</div>
+    </div>
+    <div class="disclaimer">
+        <div>🎉免责声明:</div>
+        本篇文档所有内容均为免费分享，非原创内容，均为网络搜集，归原作者所有，仅用于学习交流，请勿在资源内广告，谨防损失！禁止商业用途、转售、非法牟利。如需优化体验，请支持官方渠道。本文档内容若涉及原作者版权或权益，我们诚恳致歉，请速与我们联系。一经核实，我们将立即消除并移除相关内容，敬请谅解！
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.mySwiper',{
+  loop:true,
+  autoplay:{delay:1800,disableOnInteraction:false},
+  slidesPerView:"auto",
+  centeredSlides:true,
+  effect:"coverflow",
+  coverflowEffect:{rotate:0,stretch:-25,depth:60,modifier:1},
+  pagination:{el:".swiper-pagination"}
+});
+
+const uploadArea=document.getElementById('uploadArea');
+const fileInput=document.getElementById('fileInput');
+const previewContainer=document.getElementById('previewContainer');
+const submitBtn=document.getElementById('submitBtn');
+const successTip=document.getElementById('successTip');
+uploadArea.onclick=()=>fileInput.click();
+
+fileInput.onchange=e=>{
+previewContainer.innerHTML="";
+Array.from(e.target.files).slice(0,3).forEach(file=>{
+let r=new FileReader();
+r.onload=e=>{
+let img=document.createElement("img");
+img.src=e.target.result;
+img.className="preview-img";
+previewContainer.appendChild(img);
+};
+r.readAsDataURL(file);
+});
+};
+
+submitBtn.onclick=()=>{
+if(!fileInput.files.length)return alert("请先上传截图");
+submitBtn.disabled=true;
+successTip.style.display="block";
+setTimeout(()=>location.href="guide.html",1000);
+};
+</script>
+</body>
+</html>
